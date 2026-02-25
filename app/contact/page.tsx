@@ -1,10 +1,11 @@
 import type { Metadata } from "next"
 import { MessageCircle, Clock, Shield } from "lucide-react"
+import { SITE_URL } from "@/lib/constants"
 
 export const metadata: Metadata = {
   title: "문의하기 | 24시간 카카오톡 상담",
   description: "소액결제현금화 전문 상담. 카카오톡으로 24시간 빠르게 문의하세요. 수수료 안내, 한도 확인, 이용 방법까지 친절히 상담해드립니다.",
-  alternates: { canonical: "https://dgi-chicago.com/contact" },
+  alternates: { canonical: `${SITE_URL}/contact` },
 }
 
 const features = [

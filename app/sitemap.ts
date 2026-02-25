@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next"
 import { getAllSlugs } from "@/lib/posts"
+import { SITE_URL } from "@/lib/constants"
 
-const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://dgi-chicago.com"
+const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? SITE_URL
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [

@@ -2,12 +2,13 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight, Tag } from "lucide-react"
 import { getAllPosts, CATEGORIES } from "@/lib/posts"
+import { SITE_URL } from "@/lib/constants"
 
 export const metadata: Metadata = {
   title: "블로그 | 소액결제현금화 정보 모음",
   description:
     "소액결제현금화, 정보이용료현금화, 신용카드현금화 관련 유용한 정보와 가이드 20편을 제공합니다.",
-  alternates: { canonical: "https://dgi-chicago.com/blog" },
+  alternates: { canonical: `${SITE_URL}/blog` },
 }
 
 export default function BlogPage() {

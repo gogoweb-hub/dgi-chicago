@@ -1,22 +1,23 @@
 import type { Metadata } from "next"
+import { SITE_URL } from "@/lib/constants"
 
 export const metadata: Metadata = {
   title: "이용약관",
   description:
     "소액결제현금화 전문 서비스의 이용약관입니다. 서비스 목적, 이용 조건, 면책 조항, 분쟁 해결 방법 등을 안내합니다.",
-  alternates: { canonical: "https://dgi-chicago.com/terms" },
+  alternates: { canonical: `${SITE_URL}/terms` },
 }
 
 const jsonLdBreadcrumb = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "홈", item: "https://dgi-chicago.com" },
+    { "@type": "ListItem", position: 1, name: "홈", item: SITE_URL },
     {
       "@type": "ListItem",
       position: 2,
       name: "이용약관",
-      item: "https://dgi-chicago.com/terms",
+      item: `${SITE_URL}/terms`,
     },
   ],
 }

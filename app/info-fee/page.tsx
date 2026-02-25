@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { SITE_URL } from "@/lib/constants"
 import SubpageLayout from "@/components/SubpageLayout"
 import Link from "next/link"
 import {
@@ -14,15 +15,15 @@ export const metadata: Metadata = {
   title: "정보이용료현금화 | 구글 애플 콘텐츠이용료 당일입금",
   description:
     "정보이용료현금화 전문. 구글플레이, 애플 앱스토어 콘텐츠이용료를 당일 현금으로 전환. 수수료 20%~, SKT KT LG U+ 전 통신사 지원.",
-  alternates: { canonical: "https://dgi-chicago.com/info-fee" },
+  alternates: { canonical: `${SITE_URL}/info-fee` },
 }
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "홈", item: "https://dgi-chicago.com" },
-    { "@type": "ListItem", position: 2, name: "정보이용료현금화", item: "https://dgi-chicago.com/info-fee" },
+    { "@type": "ListItem", position: 1, name: "홈", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "정보이용료현금화", item: `${SITE_URL}/info-fee` },
   ],
 }
 

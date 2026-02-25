@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { SITE_URL } from "@/lib/constants"
 import SubpageLayout from "@/components/SubpageLayout"
 import Link from "next/link"
 import { CheckCircle, XCircle } from "lucide-react"
@@ -9,15 +10,15 @@ import {
 export const metadata: Metadata = {
   title: "카드깡 | 신용카드 한도현금화 합법 방법 2026",
   description: "카드깡이란? 신용카드 한도를 현금으로 전환하는 방법, 합법과 불법의 차이, 안전한 이용법을 완벽 가이드로 안내합니다.",
-  alternates: { canonical: "https://dgi-chicago.com/card-cash" },
+  alternates: { canonical: `${SITE_URL}/card-cash` },
 }
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "홈", item: "https://dgi-chicago.com" },
-    { "@type": "ListItem", position: 2, name: "카드깡", item: "https://dgi-chicago.com/card-cash" },
+    { "@type": "ListItem", position: 1, name: "홈", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "카드깡", item: `${SITE_URL}/card-cash` },
   ],
 }
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Shield, Scale, Users, FileText, AlertTriangle, Building, Rocket, BarChart3, BookOpen, Wrench, RefreshCw, ChevronRight } from "lucide-react"
+import { SITE_URL } from "@/lib/constants"
 
 export const metadata: Metadata = {
   title: "dgi-chicago 소개 | 운영 철학 검수 기준 신뢰도",
@@ -10,22 +11,22 @@ export const metadata: Metadata = {
   openGraph: {
     title: "dgi-chicago -- 사이트 소개",
     description: "2023년부터 운영. 전문가 검수 정보만 제공. 투명한 광고 정책.",
-    url: "https://dgi-chicago.com/about",
+    url: `${SITE_URL}/about`,
   },
-  alternates: { canonical: "https://dgi-chicago.com/about" },
+  alternates: { canonical: `${SITE_URL}/about` },
 }
 
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://dgi-chicago.com/#organization",
+  "@id": `${SITE_URL}/#organization`,
   name: "dgi-chicago",
-  url: "https://dgi-chicago.com",
+  url: SITE_URL,
   description: "소액결제현금화, 정보이용료현금화, 신용카드현금화 전문 정보 제공 플랫폼",
   foundingDate: "2023",
   areaServed: "KR",
   knowsAbout: ["소액결제현금화", "정보이용료현금화", "신용카드현금화", "소액결제 오류 해결", "소액결제 한도 관리"],
-  logo: { "@type": "ImageObject", url: "https://dgi-chicago.com/favicon.png", width: 32, height: 32 },
+  logo: { "@type": "ImageObject", url: `${SITE_URL}/favicon.png`, width: 32, height: 32 },
   contactPoint: { "@type": "ContactPoint", contactType: "customer service", availableLanguage: "Korean", hoursAvailable: "Mo-Su 00:00-24:00" },
 }
 

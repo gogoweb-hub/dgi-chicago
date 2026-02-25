@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { SITE_URL } from "@/lib/constants"
 import ToolsSection from "@/components/ToolsSection"
 import Link from "next/link"
 
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "소액결제 수수료 계산기 & 한도 체크",
     description: "무료 소액결제현금화 계산 도구. 수수료, 한도, 방법 추천 한번에.",
-    url: "https://dgi-chicago.com/tools",
+    url: `${SITE_URL}/tools`,
   },
 }
 
@@ -18,7 +19,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
   name: "소액결제현금화 수수료 계산기",
-  url: "https://dgi-chicago.com/tools",
+  url: `${SITE_URL}/tools`,
   description: "소액결제현금화 수수료를 즉시 계산하는 무료 온라인 도구",
   applicationCategory: "FinanceApplication",
   operatingSystem: "Web Browser",

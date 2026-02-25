@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { SITE_URL } from "@/lib/constants"
 import SubpageLayout from "@/components/SubpageLayout"
 import Link from "next/link"
 import {
@@ -8,15 +9,15 @@ import {
 export const metadata: Metadata = {
   title: "소액결제 정책미납 해결방법 | PG사 차단 해제 가이드",
   description: "소액결제 정책미납 원인과 해결방법 완벽 가이드. 다날, KG모빌리언스 등 PG사별 차단 해제 방법과 예방법을 상세히 안내합니다.",
-  alternates: { canonical: "https://dgi-chicago.com/policy-default" },
+  alternates: { canonical: `${SITE_URL}/policy-default` },
 }
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "홈", item: "https://dgi-chicago.com" },
-    { "@type": "ListItem", position: 2, name: "정책미납", item: "https://dgi-chicago.com/policy-default" },
+    { "@type": "ListItem", position: 1, name: "홈", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "정책미납", item: `${SITE_URL}/policy-default` },
   ],
 }
 

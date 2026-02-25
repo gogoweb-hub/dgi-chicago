@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { SITE_URL } from "@/lib/constants"
 import SubpageLayout from "@/components/SubpageLayout"
 import Link from "next/link"
 import {
@@ -8,15 +9,15 @@ import {
 export const metadata: Metadata = {
   title: "신용카드현금화 | 카드한도 당일현금 안전한 방법",
   description: "신용카드현금화 전문. 카드 결제 한도를 활용한 안전한 현금 확보 방법. 모든 카드사 지원, 수수료 8~15%, 당일 처리.",
-  alternates: { canonical: "https://dgi-chicago.com/credit-card" },
+  alternates: { canonical: `${SITE_URL}/credit-card` },
 }
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "홈", item: "https://dgi-chicago.com" },
-    { "@type": "ListItem", position: 2, name: "신용카드현금화", item: "https://dgi-chicago.com/credit-card" },
+    { "@type": "ListItem", position: 1, name: "홈", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "신용카드현금화", item: `${SITE_URL}/credit-card` },
   ],
 }
 

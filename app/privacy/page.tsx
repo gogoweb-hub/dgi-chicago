@@ -1,19 +1,20 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { SITE_URL } from "@/lib/constants"
 
 export const metadata: Metadata = {
   title: "개인정보처리방침 | dgi-chicago",
   description: "dgi-chicago의 개인정보처리방침. 수집 항목, 이용 목적, 보유 기간, 제3자 제공, 이용자 권리를 안내합니다.",
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://dgi-chicago.com/privacy" },
+  alternates: { canonical: `${SITE_URL}/privacy` },
 }
 
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   name: "개인정보처리방침",
-  url: "https://dgi-chicago.com/privacy",
-  isPartOf: { "@id": "https://dgi-chicago.com/#website" },
+  url: `${SITE_URL}/privacy`,
+  isPartOf: { "@id": `${SITE_URL}/#website` },
   dateModified: "2026-02-23",
 }
 

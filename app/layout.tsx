@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingCta from '@/components/FloatingCta'
+import { SITE_URL } from '@/lib/constants'
 import './globals.css'
 
 const notoSansKR = Noto_Sans_KR({
@@ -14,10 +15,10 @@ const notoSansKR = Noto_Sans_KR({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://dgi-chicago.com'),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: '소액결제현금화 24시 한도 해결 전문 | 시카고페이 dgi-chicago',
-    template: '%s | 시카고페이 dgi-chicago',
+    default: '소액결제 현금화 전문 센터 | 시카고페이 24시 즉시정산',
+    template: '%s | 시카고페이 24시 즉시정산',
   },
   description:
     '사업자번호 664-87-98454 정식 등록 업체. 소액결제현금화 정의·수수료·한도·오류코드·법률·사례연구까지 국내 최대 분량 완전 가이드. SKT·KT·LG U+ 전 통신사 지원, 당일입금 5분 승인, 수수료 8%~.',
@@ -37,12 +38,12 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'ko_KR',
-    url: 'https://dgi-chicago.com',
+    url: SITE_URL,
     siteName: '시카고페이 dgi-chicago',
     title: '소액결제현금화 24시 한도 해결 전문 | 시카고페이 dgi-chicago',
     description:
       '당일입금 5분 승인, 수수료 8%~, 24시간 운영. 법률·사례연구·통계 포함.',
-    images: [{ url: 'https://dgi-chicago.com/og.jpg', width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/og.jpg`, width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
     apple: '/favicon.png',
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: 'https://dgi-chicago.com' },
+  alternates: { canonical: SITE_URL },
 }
 
 export const viewport: Viewport = {
@@ -68,9 +69,9 @@ export const viewport: Viewport = {
 const jsonLdWebSite = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  '@id': 'https://dgi-chicago.com/#website',
+  '@id': `${SITE_URL}/#website`,
   name: 'dgi-chicago',
-  url: 'https://dgi-chicago.com',
+  url: SITE_URL,
   description:
     '소액결제현금화, 정보이용료현금화, 신용카드현금화 전문 정보 사이트. 당일입금, 낮은수수료, 24시간 안내.',
   inLanguage: 'ko-KR',
@@ -78,17 +79,17 @@ const jsonLdWebSite = {
     '@type': 'SearchAction',
     target: {
       '@type': 'EntryPoint',
-      urlTemplate: 'https://dgi-chicago.com/search?q={search_term_string}',
+      urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
     },
     'query-input': 'required name=search_term_string',
   },
   publisher: {
     '@type': 'Organization',
     name: 'dgi-chicago',
-    url: 'https://dgi-chicago.com',
+    url: SITE_URL,
     logo: {
       '@type': 'ImageObject',
-      url: 'https://dgi-chicago.com/favicon.png',
+      url: `${SITE_URL}/favicon.png`,
       width: 32,
       height: 32,
     },
@@ -99,12 +100,12 @@ const jsonLdWebSite = {
 const jsonLdService = {
   '@context': 'https://schema.org',
   '@type': 'FinancialService',
-  '@id': 'https://dgi-chicago.com/#service',
+  '@id': `${SITE_URL}/#service`,
   name: '소액결제현금화 전문 서비스',
   alternateName: ['소액결제 현금화', '핸드폰소액결제현금화', '정보이용료현금화'],
   description:
     'SKT KT LG U+ 전 통신사 소액결제현금화 전문. 정보이용료현금화, 신용카드현금화, 카드깡 서비스. 당일입금 5분 승인, 수수료 8%~, 24시간 연중무휴 운영.',
-  url: 'https://dgi-chicago.com',
+  url: SITE_URL,
   telephone: '010-9999-6484',
   email: 'contact@dgi-chicago.com',
   areaServed: {
@@ -266,28 +267,28 @@ const jsonLdFaq = {
 const jsonLdArticle = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://dgi-chicago.com/#article',
+  '@id': `${SITE_URL}/#article`,
   headline:
     '소액결제현금화 완벽 가이드 2026 -- 수수료 한도 방법 주의사항 법률',
   description:
     '소액결제현금화의 정의, 이용 방법, 수수료 비교, 한도 확인, 다날 오류코드, 법률 주의사항까지 국내 최대 분량의 완전 가이드.',
   image: {
     '@type': 'ImageObject',
-    url: 'https://dgi-chicago.com/og.jpg',
+    url: `${SITE_URL}/og.jpg`,
     width: 1200,
     height: 630,
   },
   author: {
     '@type': 'Organization',
     name: 'dgi-chicago',
-    url: 'https://dgi-chicago.com',
+    url: SITE_URL,
   },
   publisher: {
     '@type': 'Organization',
     name: 'dgi-chicago',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://dgi-chicago.com/favicon.png',
+      url: `${SITE_URL}/favicon.png`,
       width: 32,
       height: 32,
     },
@@ -296,7 +297,7 @@ const jsonLdArticle = {
   dateModified: '2026-02-23T09:00:00+09:00',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://dgi-chicago.com',
+    '@id': SITE_URL,
   },
   articleSection: '소액결제현금화',
   keywords: [
@@ -335,12 +336,12 @@ const jsonLdBreadcrumb = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: '홈', item: 'https://dgi-chicago.com' },
-    { '@type': 'ListItem', position: 2, name: '소액결제현금화', item: 'https://dgi-chicago.com' },
-    { '@type': 'ListItem', position: 3, name: '정보이용료현금화', item: 'https://dgi-chicago.com/info-fee' },
-    { '@type': 'ListItem', position: 4, name: '신용카드현금화', item: 'https://dgi-chicago.com/credit-card' },
-    { '@type': 'ListItem', position: 5, name: '카드깡', item: 'https://dgi-chicago.com/card-cash' },
-    { '@type': 'ListItem', position: 6, name: '문의하기', item: 'https://dgi-chicago.com/contact' },
+    { '@type': 'ListItem', position: 1, name: '홈', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: '소액결제현금화', item: SITE_URL },
+    { '@type': 'ListItem', position: 3, name: '정보이용료현금화', item: `${SITE_URL}/info-fee` },
+    { '@type': 'ListItem', position: 4, name: '신용카드현금화', item: `${SITE_URL}/credit-card` },
+    { '@type': 'ListItem', position: 5, name: '카드깡', item: `${SITE_URL}/card-cash` },
+    { '@type': 'ListItem', position: 6, name: '문의하기', item: `${SITE_URL}/contact` },
   ],
 }
 

@@ -3,6 +3,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { ArrowLeft, Clock, Tag } from "lucide-react"
 import { getPostBySlug, getRelatedPosts, getAllSlugs, CATEGORIES } from "@/lib/posts"
+import { SITE_URL } from "@/lib/constants"
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const post = getPostBySlug(slug)
   if (!post) return {}
-  const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://dgi-chicago.com"
+  const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? SITE_URL
   return {
     title: post.title,
     description: post.description,
@@ -47,7 +48,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   const related = getRelatedPosts(post.relatedSlugs)
   const categoryLabel = CATEGORIES.find((c) => c.id === post.category)?.label ?? post.category
-  const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://dgi-chicago.com"
+  const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? SITE_URL
 
   const articleSchema = {
     "@context": "https://schema.org",
